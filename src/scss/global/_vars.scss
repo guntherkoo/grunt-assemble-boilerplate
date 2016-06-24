@@ -1,0 +1,41 @@
+// Colors
+
+// Primary Colors //
+$color-white : #fff;
+$color-black : #000;
+$color-offwhite: #eee;
+$color-lightgrey: #9d9fa2; 
+$color-grey: #666; 
+$color-darkgrey: #414042; 
+
+// Project Based Colors //
+$color-orange: #f36a00; 
+$color-red: #ec3814; 
+$color-limegreen: #8dc63f;
+
+
+// Media Query Sizes
+
+// Desktop //
+$breakpoint-large: 1680px;
+$breakpoint-medium: 1024px;
+$breakpoint-small: 640px;
+
+// Tablet //
+$breakpoint-ipad-landscape: 1024px;
+$breakpoint-ipad-portrait: 768px;
+
+// iPhone 6+ //
+$breakpoint-iphone6plus-landscape: 736px;
+$breakpoint-iphone6plus-portrait: 414px;
+
+// iPhone 6 //
+$breakpoint-iphone6-landscape: 667px;
+$breakpoint-iphone6-portrait: 375px;
+
+// iPhone 5 => 4 //
+$breakpoint-iphone5-landscape: 568px;
+$breakpoint-iphone5-portrait: 320px;
+
+
+// Animations

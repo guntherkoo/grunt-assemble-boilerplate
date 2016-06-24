@@ -1,0 +1,99 @@
+//////// Media Queries [START] ////////
+
+// Foundation [Large]
+@media only screen and (min-width: $breakpoint-large) {
+	.breakpoint-large-screen-show {
+		display: block;
+	}
+
+	.breakpoint-large-screen-hide {
+		display: none;
+	}
+}
+
+// Foundation [Medium]
+@media only screen and (max-width: $breakpoint-medium) {
+	.breakpoint-medium-screen-show {
+		display: block;
+	}
+
+	.breakpoint-medium-screen-hide {
+		display: none;
+	}
+}
+
+// Foundation [Small]
+@media only screen and (max-width: $breakpoint-small) {
+	.breakpoint-small-screen-show {
+		display: block;
+	}
+
+	.breakpoint-small-screen-hide {
+		display: none;
+	}
+}
+
+/////////////////////////////////////
+
+// iPads (Portrait and Landscape)
+@media only screen and (min-width : $breakpoint-ipad-portrait) and (max-width : $breakpoint-ipad-landscape) {
+	.breakpoint-ipad-screen-show {
+		display: block;
+	}
+
+	.breakpoint-ipad-screen-hide {
+		display: none;
+	}
+}
+
+// iPads (Portrait)
+@media only screen and (min-width : $breakpoint-ipad-portrait) and (max-width : $breakpoint-ipad-landscape)
+and (orientation : portrait) {}
+
+// iPads (Landscape)
+@media only screen and (min-width : $breakpoint-ipad-portrait) and (max-width : $breakpoint-ipad-landscape)
+and (orientation : landscape) {}
+
+/////////////////////////////////////
+
+// iPhones 6+ => (Portrait and Landscape)
+@media only screen and (min-width : $breakpoint-iphone6-portrait) and (max-width : $breakpoint-iphone6-landscape) {
+	.breakpoint-iphone6-screen-show {
+		display: block;
+	}
+
+	.breakpoint-iphone6-screen-hide {
+		display: none;
+	}
+}
+
+// iPhones (Portrait)
+@media only screen and (min-width : $breakpoint-iphone6-portrait) and (max-width : $breakpoint-iphone6-landscape)
+and (orientation: portrait) {}
+
+// iPhones (Landscape)
+@media only screen and (min-width : $breakpoint-iphone6-portrait) and (max-width : $breakpoint-iphone6-landscape)
+and (orientation: landscape) {}
+
+/////////////////////////////////////
+
+// iPhones 5 => (Portrait and Landscape)
+@media only screen and (min-width : $breakpoint-iphone5-portrait) and (max-width : $breakpoint-iphone5-landscape) {
+	.breakpoint-iphone5-screen-show {
+		display: block;
+	}
+
+	.breakpoint-iphone5-screen-hide {
+		display: none;
+	}
+}
+
+// iPhones (Portrait)
+@media only screen and (min-width : $breakpoint-iphone5-portrait) and (max-width : $breakpoint-iphone5-landscape)
+and (orientation: portrait) {}
+
+// iPhones (Landscape)
+@media only screen and (min-width : $breakpoint-iphone5-portrait) and (max-width : $breakpoint-iphone5-landscape)
+and (orientation: landscape) {}
+
+//////// Media Queries [END] ////////

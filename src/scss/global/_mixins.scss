@@ -1,0 +1,273 @@
+//////// Mixins Styles [START] //////// 
+
+// Media Queries - Retina - http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss & http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
+@mixin image-2x($image, $width, $height) {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi) {
+      background-image: url('../images/#{$image}');
+      background-size: $width $height;
+  }
+}
+
+// Background Opacity
+@mixin background-opacity ($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
+
+// Backface Visibility
+@mixin backface-visibility ($arguments) {
+  -webkit-backface-visibility: $arguments;
+     -moz-backface-visibility: $arguments;
+      -ms-backface-visibility: $arguments;
+       -o-backface-visibility: $arguments;
+          backface-visibility: $arguments;
+}
+
+// .svg w/ .png fallback for IE8
+@mixin svg-background($file_name) {
+  background-image: url('../images/#{$file_name}.png');
+  background-image: none, url('../images/#{$file_name}.svg');
+}
+
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value;
+}
+
+@mixin box-sizing( $type: border-box ) {
+    -webkit-box-sizing: $type;
+       -moz-box-sizing: $type;
+         -o-box-sizing: $type;
+        -ms-box-sizing: $type;
+            box-sizing: $type;
+}
+
+@mixin text-columns ($cols) {
+  -moz-column-count: $cols; 
+  -webkit-column-count: $cols; 
+  column-count: $cols;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($transition-property, $transition-time, $method:cubic-bezier(.42, 0, .58, 1)) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin transform3d($transform-x, $transform-y, $transform-z){
+  -webkit-transform: translate3d($transform-x, $transform-y, $transform-z);
+  -moz-transform: translate3d($transform-x, $transform-y, $transform-z);
+  -ms-transform: translate3d($transform-x, $transform-y, $transform-z);
+  -o-transform: translate3d($transform-x, $transform-y, $transform-z);
+  transform: translate3d($transform-x, $transform-y, $transform-z);
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform:    scale($scale);
+  -ms-transform:     scale($scale);
+  -o-transform:      scale($scale);
+  transform:         scale($scale);
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+@mixin animation ($delay, $duration, $iteration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-iteration-count: $iteration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-iteration-count: $iteration;
+    -moz-animation-name: $animation;
+    -o-animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-iteration-count: $iteration;
+    -o-animation-name: $animation;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-iteration-count: $iteration;
+    animation-name: $animation;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+  -webkit-box-shadow:inset $top $left $blur $color;
+  -moz-box-shadow:inset $top $left $blur $color;
+  box-shadow:inset $top $left $blur $color;
+  } @else {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin text-shadow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color;
+}
+
+
+// Media Queries
+@mixin respond-to($media) {
+  @if $media == iphone5-landscape {
+    @media only screen and (max-width : $breakpoint-iphone5-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == iphone5-portrait {
+    @media only screen and (max-width : $breakpoint-iphone5-portrait)
+    { 
+      @content; 
+    }
+  }
+  @else if $media == iphone5-device {
+    @media only screen and (min-width : $breakpoint-iphone5-portrait) and (max-width : $breakpoint-iphone5-landscape)
+    { 
+      @content; 
+    }
+  }
+  @else if $media == iphone6-landscape {
+    @media only screen and (max-width : $breakpoint-iphone6-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == iphone6-portrait {
+    @media only screen and (max-width : $breakpoint-iphone6-portrait) { 
+      @content; 
+    }
+  }
+  @else if $media == iphone6-device {
+    @media only screen and (min-width : $breakpoint-iphone6-portrait) and (max-width : $breakpoint-iphone6-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == iphone6plus {
+    @media only screen and (max-width : $breakpoint-iphone6plus-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == iphone6plus-device {
+    @media only screen and (min-width : $breakpoint-iphone6plus-portrait) and (max-width : $breakpoint-iphone6plus-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == ipad-landscape {
+    @media only screen and (max-width : $breakpoint-ipad-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == ipad-portrait {
+    @media only screen and (max-width : $breakpoint-ipad-portrait) { 
+      @content; 
+    }
+  }
+  @else if $media == ipad-device {
+    @media only screen and (min-width : $breakpoint-ipad-portrait) and (max-width : $breakpoint-ipad-landscape) { 
+      @content; 
+    }
+  }
+  @else if $media == small-screens {
+    @media only screen and (max-width: $breakpoint-small) { 
+      @content; 
+    }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (max-width: $breakpoint-medium) { 
+      @content; 
+    }
+  }
+  @else if $media == large-screens {
+    @media only screen and (min-width: $breakpoint-large) { 
+      @content; 
+    }
+  }
+}
+
+
+////// Base Mixins //////
+@mixin translate($x, $y) {
+   @include transform(translate($x, $y));
+}
+@mixin base-box-shadow {
+  @include box-shadow ( 0, 0, 1.5em, $color-lightgrey, $inset: false);
+}
+
+@mixin base-text-shadow {
+  @include text-shadow ( .02em, .02em, .02em, $color-lightgrey);
+}
+
+@mixin base-short-transition{
+  @include transition(all, 0.2s);
+}
+
+@mixin base-medium-transition {
+  @include transition(all, 0.5s);
+}
+
+@mixin base-long-transition {
+  @include transition(all, 1s);
+}
+
+@mixin base-verylong-transition {
+  @include transition(all, 5s);
+}
+
+@mixin circle-shape {
+  @include border-radius(50%);
+}
+
+//////// Mixins Styles [END] //////// 

@@ -1,0 +1,15 @@
+.main-nav {
+	
+	.nav__list {
+
+		.nav__list-item {
+
+			&.active {
+
+				.nav__list-item-link {
+					font-weight: 900;
+				}
+			}
+		}
+	}
+}
