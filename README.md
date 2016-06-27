@@ -7,6 +7,10 @@
 * NodeJS (>= 0.12.0)
 * Grunt
 
+## Technologies Used
+- Handlebars
+- Assemble.io
+
 ## Setup
 - Make sure you have the latest Node.js installed
 - Make sure grunt-cli is installed globally on your machine (run npm install -g grunt-cli)
