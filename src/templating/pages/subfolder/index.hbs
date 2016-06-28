@@ -1,30 +1,13 @@
 ---
 title: Template Subpage
-menuLink: Subpage
 sortOrder: 02
 pagePath: /subfolder
 bodyClass: Subpage
 ---
-{{>navigationModule}}
+{{>navigationModule showThisInstead=true}}
 
-<h3>Place your content here!</h3>
+<h3>This is the {{bodyClass}}</h3>
 
-<div class="slider">
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
-</div>
-<br>
-<h3>
-	Live chat messenger, Firebase database
-</h3>
-<div id='messagesDiv'></div>
-<br>
-<input type='text' id='nameInput' placeholder='Name'>
-<input type='text' id='messageInput' placeholder='Message'>
+{{#each content.SiteSections}}
+	{{>contentSections}}
+{{/each}}

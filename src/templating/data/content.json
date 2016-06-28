@@ -1,3 +1,23 @@
 {
-	"title": "Page Title"
+	"PageDetails": {
+		"title": "Droga5 Internal Project",
+		"subtitle": "The People Behind It All"
+	},
+
+	"SiteSections": {
+		"topSection": {
+			"title": "This is the top section",
+			"subtitle": "First!"
+		},
+
+		"middleSection": {
+			"title": "This is the middle section",
+			"subtitle": "In the middle?"
+		},
+
+		"bottomSection": {
+			"title": "This is the bottom section",
+			"subtitle": "I'm last..."
+		}
+	}
 }

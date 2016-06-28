@@ -1,0 +1,22 @@
+<section class="content-wrapper">
+	<h1 class="h1 the-title">
+		{{title}}
+	</h1>
+	{{#if hideSubtitle}}
+		<small><em>You hide the subtitle</em></small>
+		{{else}}
+		<h2 class="h2 the-subtitle">
+			{{subtitle}}
+		</h2>
+	{{/if}}
+	{{#if aboutPage}}
+		<h3 class="h3 about-page">
+			This is the about page, right?
+		</h3>
+			{{else}}
+			<h3 class="h3 about-page">
+				This is NOT the about page
+			</h3>
+	{{/if}}
+	<hr>
+</section>

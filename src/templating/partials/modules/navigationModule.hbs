@@ -3,17 +3,18 @@ blockType: nav
 ---
 <nav class="main-nav">
 	<h2>Navigation</h2>
-	{{#if showThis}}
-		<h2>Only appear if true</h2>
-	{{/if}}
 	<ul class="nav__list">
-		{{#withSort pages 'data.menuSortOrder'}}
+		{{#withSort pages 'data.sortOrder'}}
 			<li class="nav__list-item{{#is ../page.dest this.dest}} active{{/is}}">
-				<a href="{{data.pagePath}}" class="nav__list-item-link">{{data.menuLink}}</a>
+				<a href="{{data.pagePath}}" class="nav__list-item-link">{{data.bodyClass}}</a>
 			</li>
 		{{/withSort}}
 	</ul>
-	{{#if showThisElse}}
-		<h2>Only appear if true TOOOO</h2>
+	{{#if showThis}}
+		<h2>Only appear if true</h2>
+		{{else}}
+		{{#if showThisInstead}}
+		<h2>Nah, showing this instead</h2>
+		{{/if}}
 	{{/if}}
 </nav>
