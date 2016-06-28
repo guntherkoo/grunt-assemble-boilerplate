@@ -9,15 +9,11 @@ bodyClass: Homepage
 <h3>This is the {{bodyClass}}</h3>
 
 <div class="slider">
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
-	<div class="slides">
-		<img src="http://placehold.it/750x150/" alt="">
-	</div>
+	{{#each content.SliderContent}}
+		<div class="slides">
+			<img src="{{imgSrc}}" alt="">
+		</div>
+	{{/each}}
 </div>
 <br>
 <h3>

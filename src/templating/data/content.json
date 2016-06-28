@@ -19,5 +19,22 @@
 			"title": "This is the bottom section",
 			"subtitle": "I'm last..."
 		}
+	},
+
+	"SliderContent": {
+		"slide-1": {
+			"title": "This is the first slide!",
+			"imgSrc": "http://placehold.it/750x150/111111/dddddd"
+		},
+
+		"slide-2": {
+			"title": "This is the second slide!",
+			"imgSrc": "http://placehold.it/750x150/aaaaaa/000000"
+		},
+
+		"slide-3": {
+			"title": "This is the third slide!",
+			"imgSrc": "http://placehold.it/750x150/dddddd/eeeeee"
+		}
 	}
 }
