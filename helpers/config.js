@@ -35,8 +35,8 @@ config.options = {
 
 	// define your ports for livereload
 	ports: {
-		app: 4000,
-		test: 4001,
+		app: 3000,
+		test: 3001,
 		livereload: 35731
 	}
 };
