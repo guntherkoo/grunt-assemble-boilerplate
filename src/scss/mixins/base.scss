@@ -1,0 +1,60 @@
+// Base Styles
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+* {
+	@extend .roboto;
+
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html,
+body {
+	font-size: 10px;
+}
+
+// Type Styles
+p {
+	font-size: 1.4rem;
+
+	small {
+		font-size: .8em;
+	}
+}
+
+a {
+	transition: color .25s $easeInOut;
+	backface-visibility: hidden;
+	text-decoration: none;
+	color: $limegreen;
+
+	&:hover {
+		color: $grey;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		font-size: 1.4rem;
+	}
+}

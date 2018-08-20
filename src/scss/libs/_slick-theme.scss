@@ -58,7 +58,7 @@
 .slick-prev:before, .slick-next:before {
     font-size: 20px;
     line-height: 1;
-    color: $color-grey;
+    color: $grey;
     opacity: .25;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -142,14 +142,14 @@
                 font-size: 2rem;
                 line-height: 20px;
                 text-align: center;
-                color: $color-grey;
+                color: $grey;
                 opacity: .25;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
         &.slick-active button:before {
-            color: $color-grey;
+            color: $grey;
             opacity: 1;
         }
     }

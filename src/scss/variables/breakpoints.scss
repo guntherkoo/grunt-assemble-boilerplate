@@ -1,0 +1,28 @@
+// Reset Foundation Row Width
+.row {
+	max-width: 128rem;
+}
+
+// Mobile First Breakpoints //
+$bp-1681: 1681px; // xlarge-screens
+$bp-1281: 1281px; // large-screens
+$bp-1025: 1025px; // medium-screens
+$bp-801: 801px; // lsmall-screens
+$bp-641: 641px; // small-screens
+$bp-321: 321px; // xsmall-screens
+
+// Tablet //
+$bp-ipad-landscape: 1024px;
+$bp-ipad-portrait: 768px;
+
+// iPhone 6+ //
+$bp-iphone6plus-landscape: 736px;
+$bp-iphone6plus-portrait: 414px;
+
+// iPhone 6 //
+$bp-iphone6-landscape: 667px;
+$bp-iphone6-portrait: 375px;
+
+// iPhone 5 => 4 //
+$bp-iphone5-landscape: 568px;
+$bp-iphone5-portrait: 320px;

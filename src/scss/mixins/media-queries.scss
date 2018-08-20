@@ -1,0 +1,91 @@
+// Media Queries - This is mobile first
+@mixin respond-to($media) {
+    // Desktop Responsive Breakpoints
+    @if $media == xsmall-screens {
+        @media only screen and ( min-width : $bp-321 ) { 
+            @content; 
+        }
+    }
+
+    @else if $media == small-screens {
+        @media only screen and ( min-width : $bp-641 ) { 
+            @content; 
+        }
+    }
+    
+    @if $media == lsmall-screens {
+        @media only screen and ( min-width : $bp-801 ) { 
+            @content; 
+        }
+    }
+
+    @else if $media == medium-screens {
+        @media only screen and ( min-width : $bp-1025 ) { 
+            @content; 
+        }
+    }
+
+    @else if $media == large-screens {
+        @media only screen and ( min-width : $bp-1281 ) { 
+            @content; 
+        }
+    }
+
+    @else if $media == xlarge-screens {
+        @media only screen and ( min-width : $bp-1681 ) { 
+            @content; 
+        }
+    }
+
+    // iPhone 5
+    @else if $media == iphone5-landscape {
+        @media only screen and (min-device-width: $bp-iphone5-portrait) and (max-device-width: $bp-iphone5-landscape) and (orientation: landscape) { 
+            @content; 
+        }
+    }
+
+    @else if $media == iphone5-portrait {
+        @media only screen and (min-device-width: $bp-iphone5-portrait) and (max-device-width: $bp-iphone5-landscape) and (orientation: portrait) { 
+            @content; 
+        }
+    }
+
+    // iPhone 6
+    @else if $media == iphone6-landscape {
+        @media only screen and (min-device-width: $bp-iphone6-portrait) and (max-device-width: $bp-iphone6-landscape) and (orientation: landscape) { 
+            @content; 
+        }
+    }
+
+    @else if $media == iphone6-portrait {
+        @media only screen and (min-device-width: $bp-iphone6-portrait) and (max-device-width: $bp-iphone6-landscape) and (orientation: portrait) { 
+            @content; 
+        }
+    }
+
+    // iPhone 6+
+    @else if $media == iphone6plus-landscape {
+        @media only screen and (min-device-width: $bp-iphone6plus-portrait) and (max-device-width: $bp-iphone6plus-landscape) and (orientation: landscape) { 
+            @content; 
+        }
+    }
+
+    @else if $media == iphone6plus-portrait {
+        @media only screen and (min-device-width: $bp-iphone6plus-portrait) and (max-device-width: $bp-iphone6plus-landscape) and (orientation: portrait) { 
+            @content; 
+        }
+    }
+
+    // iPad
+    @else if $media == ipad-landscape {
+        @media only screen and (min-device-width: $bp-ipad-portrait) and (max-device-width: $bp-ipad-landscape) and (orientation: landscape) { 
+            @content; 
+        }
+    }
+
+    @else if $media == ipad-portrait {
+        @media only screen and (min-device-width: $bp-ipad-portrait) and (max-device-width: $bp-ipad-landscape) and (orientation: portrait) { 
+            @content; 
+        }
+    }
+}
