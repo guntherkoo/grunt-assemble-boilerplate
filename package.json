@@ -1,5 +1,6 @@
 {
   "name": "grunt-assemble",
+  "version": "1.0.0",
   "description": "Built off Veams template, customized to my liking.",
   "author": {
     "name": "Gunther Koo",
@@ -17,7 +18,7 @@
     "configFile": "helpers/config.js"
   },
   "dependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^3.0.0"
   },
   "devDependencies": {
     "babelify": "^6.2.0",
