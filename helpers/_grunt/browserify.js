@@ -8,8 +8,10 @@ module.exports = {
 	options: {
 		transform: [
 			[
-				"babelify", {
-					"stage": 0
+				'babelify', {
+					'presets': [
+						'babel-preset-env'
+					]
 				}
 			]
 		]
