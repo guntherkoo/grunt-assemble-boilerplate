@@ -1,8 +1,5 @@
 ---
-title: Grunt Assemble Template
-sortOrder: 01
-pagePath: /
-bodyClass: Homepage
+title: Custom Hub Homepage
 ---
 {{>navigationModule showThis=true}}
 
@@ -10,16 +7,8 @@ bodyClass: Homepage
 
 <div class="slider">
 	{{#each content.SliderContent}}
-		<div class="slides">
-			<img src="{{imgSrc}}" alt="">
-		</div>
+	<div class="slides">
+		<img src="{{imgSrc}}" alt="">
+	</div>
 	{{/each}}
 </div>
-<br>
-<h3>
-	Live chat messenger, Firebase database
-</h3>
-<div id='messagesDiv'></div>
-<br>
-<input type='text' id='nameInput' placeholder='Name'>
-<input type='text' id='messageInput' placeholder='Message'>

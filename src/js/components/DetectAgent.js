@@ -1,28 +1,23 @@
-global.jQuery = require('jquery');
-var $ = global.jQuery;
+const ua = window.navigator.userAgent;
+const html = document.querySelector('html');
 
-export default function (){
-	$(function (){
+export default () => {
+	// User Agent Detect 
+	if ( !!ua.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) {
+		html.classList.add('touch');
+	} else {
+		html.classList.add('no-touch');
+	}
 
-		///////////////// User Agent Detect /////////////////
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('html').addClass('touch');
-		} else {
-			$('html').addClass('no-touch');
-		}
+	if (!!ua.match(/(iPad)/i)) {
+		html.classList.add('ios','no-android','ios-tablet');
+	}
 
-		if (navigator.userAgent.match(/(iPad)/)) {
-			$('html').addClass('ios no-android ios-tablet');
-		}
+	if (!!ua.match(/(iPod|iPhone|iPad)/i)) {
+		html.classList.add('ios','no-android');
+	}
 
-		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-			$('html').addClass('ios no-android');
-		}
-
-		if (navigator.userAgent.match(/(Android)/)) {
-			$('html').addClass('no-ios android');
-		}
-
-	});
-	
+	if (!!ua.match(/(Android)/i)) {
+		html.classList.add('no-ios','android');
+	}
 }

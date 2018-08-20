@@ -1,15 +1,5 @@
----
-blockType: nav
----
 <nav class="main-nav">
 	<h2>Navigation</h2>
-	<ul class="nav__list">
-		{{#withSort pages 'data.sortOrder'}}
-			<li class="nav__list-item{{#is ../page.dest this.dest}} active{{/is}}">
-				<a href="{{data.pagePath}}" class="nav__list-item-link">{{data.bodyClass}}</a>
-			</li>
-		{{/withSort}}
-	</ul>
 	{{#if showThis}}
 		<h2>Only appear if true</h2>
 		{{else}}

@@ -1,10 +1,9 @@
 global.jQuery = require('jquery');
-var $ = global.jQuery,
+const $ = global.jQuery,
 	slick = require('slick-carousel'),
 	easing = require('jquery-easing');
 
-export default function (el, speed, infinite){
-
+export default (el, speed, infinite) => {
 	// Slick Carousel
 	$(el).slick({
 		dots: true,
@@ -12,5 +11,4 @@ export default function (el, speed, infinite){
 		infinite: infinite,
 		easing: 'easeInOutCubic'
 	});
-
 }
