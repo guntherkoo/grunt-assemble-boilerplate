@@ -4,7 +4,7 @@
 
 ## Requirements For Frontend Development
 
-* NodeJS (>= 0.12.0)
+* NodeJS (>= 0.12.0) - Make sure you have latest Node (`node -v`)
 * Grunt
 
 ## Technologies Used
@@ -13,12 +13,12 @@
 
 ## Setup
 - Make sure you have the latest Node.js installed [https://nodejs.org/en/]
-- Make sure grunt-cli is installed globally on your machine (run npm install -g grunt-cli) [http://gruntjs.com/installing-grunt]
-- Run npm install the first time you pull to get all node_modules
-- After installation, run grunt serve to start livereload server and start deving! 
+- Make sure grunt-cli is installed globally on your machine (run `npm install -g grunt-cli`) [http://gruntjs.com/installing-grunt]
+- Run `npm install` the first time you pull to get all node_modules
+- After installation, run `grunt` to start livereload server and start deving! 
 
 ## To Build
-- Run grunt dist
+- Run `grunt dist`
 
 
 ## Browser-Support
